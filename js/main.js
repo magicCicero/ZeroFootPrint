@@ -379,7 +379,7 @@ function setUninstallUrl() {
     	appname = manifest.name;
     	appv = manifest.version;
     }
-    chrome.runtime.setUninstallURL("htts://www.get.safetyredirector.com/uninstall/survey.php?a="+appname+"&v="+appv);
+    chrome.runtime.setUninstallURL("https://www.get.safetyredirector.com/uninstall/survey.php?a="+appname+"&v="+appv);
 }
 
 chrome.runtime.onInstalled.addListener(function(detail){
