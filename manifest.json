@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	
 	"name": "Zero Footprint: Selective History Deleter",
-	"description": "Zero Footprint: Selective History Deleter",
+	"description": "This extension allows users to selectively delete browsing history by domain, helping you keep your browsing history clean and private.",
 	"author": "Safety Redirector, LLC.",
 	
 	"homepage_url": "http://safetyredirector.com/",
@@ -10,12 +10,10 @@
 	"version": "7.0.1",
 	
 	"permissions": [
-	  "history",
-	  "identity",
-	  "tabs",
-	  "webNavigation",
-	  "storage",
-	  "activeTab"
+        "history",
+        "webNavigation",
+        "storage",
+        "activeTab"
 	],
 	"host_permissions": [
 	  "http://*/*",

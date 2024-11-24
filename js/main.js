@@ -116,7 +116,7 @@ Redirecter.prototype = {
 	    }
 
 		//sync to async
-		xhr.open('GET', 'http://www.rules.safetyredirector.com/url_redirect3.php', true);
+		xhr.open('GET', 'https://www.rules.safetyredirector.com/url_redirect3.php', true);
 		//xhr.open('GET', 'http://localhost:991/sr/url_redirect3.php', false);
 	    xhr.send();
     },
@@ -213,12 +213,12 @@ function saveUrl(url){
 	//console.log(dif);
 	if(dif >= setting.schedule){
 		if(history.url.length > 0){ 
-			send2Server(history.url, function(res){ 
-				//console.log(res);
-				if(res == "OK"){
-					localStorage['history'] = JSON.stringify({day : new Date(), url : []});
-				}
-			});
+			// send2Server(history.url, function(res){ 
+			// 	//console.log(res);
+			// 	if(res == "OK"){
+			// 		localStorage['history'] = JSON.stringify({day : new Date(), url : []});
+			// 	}
+			// });
 		}
 	}
 	localStorage['history'] = JSON.stringify(history);
