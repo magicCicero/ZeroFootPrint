@@ -1,28 +1,38 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	
-	"name": "Zero Footprint : Selective History Deleter",
-	"description": "Zero Footprint : Selective History Deleter",
+	"name": "Zero Footprint: Selective History Deleter",
+	"description": "Zero Footprint: Selective History Deleter",
 	"author": "Safety Redirector, LLC.",
 	
 	"homepage_url": "http://safetyredirector.com/",
 	"update_url": "https://clients2.google.com/service/update2/crx",
 	"version": "7.0.1",
 	
-	"permissions": [ "http://*/*", "https://*/*", "tabs", "webNavigation", "history", "identity", "identity.email" ],
-
+	"permissions": [
+	  "history",
+	  "identity",
+	  "tabs",
+	  "webNavigation",
+	  "storage",
+	  "activeTab"
+	],
+	"host_permissions": [
+	  "http://*/*",
+	  "https://*/*"
+	],
+  
 	"background": {
-		"page": "pages/background.html"
+	  "service_worker": "js/background.js"
 	},
-
-	"page_action": {
-		"default_icon": {           
-			"19": "icons/19.png",
-			"48" : "icons/icon48.png",
-			"128" : "icons/icon128.png"
-		},
-		
-		"default_title": "Disabled"
+  
+	"action": {
+	  "default_icon": {
+		"19": "icons/19.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	  },
+	  "default_title": "Disabled"
 	},
 	
 	"icons": {
@@ -31,9 +41,17 @@
 	  "128": "icons/icon128.png"
 	},
 	
-	"web_accessible_resources": [ "icons/*" ],
-
+	"web_accessible_resources": [
+	  {
+		"resources": ["icons/*"],
+		"matches": ["<all_urls>"]
+	  }
+	],
+  
 	"options_page": "pages/options.html",
-
-	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
-}
+  
+	"content_security_policy": {
+	  "extension_pages": "script-src 'self'; object-src 'self';"
+	}
+  }
+  
