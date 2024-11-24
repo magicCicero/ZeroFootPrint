@@ -48,7 +48,7 @@
 	"options_page": "pages/options.html",
   
 	"content_security_policy": {
-	  "extension_pages": "script-src 'self' https://*; object-src 'self';"
+	  "extension_pages": "script-src 'self'; object-src 'self';"
 	}
   }
   
