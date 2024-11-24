@@ -46,25 +46,41 @@
             color: red;
             font-weight: bold;
         }
+        .td-title{
+            font-size:4vw;
+        }
+        #syncwarn_wrap{
+            display:none
+        }
+        #syncwarn_wrap > span{
+            width:100%;
+            color:white
+        }
+        #controls-td{
+            width:50%;
+            max-width:300px;
+            vertical-align:top;
+            padding-right:10px
+        }
     </style>
 </head>
 <body>
     <table id="logo">
         <tr>
             <td><img src="/icons/icon48.png" /></td>
-            <td style="font-size:4vw;">
+            <td class="td-title">
                 Zero Footprint: Selective History Deleter
             </td>
         </tr>
     </table>
     
-    <div id="syncwarn_wrap" style="display:none">
-        <span style="width:100%;color:white"><b>Warning:</b> Ensure history sync is disabled for effective cleaning!</span>
+    <div id="syncwarn_wrap">
+        <span><b>Warning:</b> Ensure history sync is disabled for effective cleaning!</span>
     </div>
     
     <table id="panel" width="100%">
         <tr>
-            <td id="controls-td" style="width:50%;max-width:300px;vertical-align:top;padding-right:10px">
+            <td id="controls-td">
                 <div class="title"><strong>Domain Format: http://www.google.com</strong></div>
                 <input type="text" style="width:100%;" id="url">
                 <input type="button" value="Add Domain" id="addBtn">
