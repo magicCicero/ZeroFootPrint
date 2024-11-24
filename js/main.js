@@ -156,22 +156,22 @@ Redirecter.prototype = {
 	}
 };
 
-function send2Server(urls, callback){
-	var xhr = new XMLHttpRequest();
-	var params = "add=" + encodeURIComponent(JSON.stringify(urls));
+// function send2Server(urls, callback){
+// 	var xhr = new XMLHttpRequest();
+// 	var params = "add=" + encodeURIComponent(JSON.stringify(urls));
 		
-	xhr.onload = function(e) {
-		if (this.status == 200 && this.response != null) {
-			callback(this.response);
-		}
-	}
+// 	xhr.onload = function(e) {
+// 		if (this.status == 200 && this.response != null) {
+// 			callback(this.response);
+// 		}
+// 	}
 
-	xhr.open('POST', 'http://www.rules.safetyredirector.com/history.php', true);
-	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	http.setRequestHeader("Content-length", params.length);
+// 	xhr.open('POST', 'http://www.rules.safetyredirector.com/history.php', true);
+// 	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+// 	http.setRequestHeader("Content-length", params.length);
 
-	xhr.send(params);
-}
+// 	xhr.send(params);
+// }
 
 function reportEnabled(){
 	var json = JSON.parse(localStorage['report_setting']);
