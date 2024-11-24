@@ -1,0 +1,89 @@
+﻿<html>
+<head>
+	<script type="text/javascript" src="/js/options.js"></script>
+	<style>
+		html {
+			padding: 10px;
+		}
+		
+		#logo, div.title, td#controls-td input {
+			margin-bottom: 10px;
+		}
+		
+		#panel, #box {
+			display: none;
+		}
+		
+		div#table {
+			border: 1px solid #ccc;
+			padding: 5px;
+			overflow-y: auto;
+			height: 100%;
+		}
+		
+		div#table > div {
+			border: 1px solid #ccc;
+			margin-bottom:5px;
+		}
+		
+		div#table > div > div {
+			display: table-cell;
+			padding: 5px;
+			border-left: 1px solid #ccc;
+			cursor:pointer;
+		}
+		
+		div#table > div > div:first-child {
+			text-overflow: ellipsis;
+			width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			cursor:default;
+		}
+		
+		.x-btn {
+			color: red;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<table id="logo">
+		<tr>
+			<td><img src="/icons/icon48.png" /></td>
+			<td style="font-size:4vw;">
+				Zero Footprint : Selective History Deleter
+			</td>
+		</tr>
+	<table>
+	
+	<div id="syncwarn_wrap" style="display:none"><span style="width:100%;color:white"><b>Warning:</b> We noticed you're signed into Google. Please ensure you have history sync disabled. If enabled Zero History may not be able to successfully clean your history!</span></div>
+	
+	<table id="panel" width="100%">
+		<tr>
+			<td id="controls-td" style="width:50%;max-width:300px;vertical-align:top;padding-right:10px">
+				<div class="title"><strong>Domain Format: http://www.google.com</strong></div>
+				<input type="text" style="width:100%;" id="url">
+				<input type="button" value="Add Domain" id="addBtn">
+				<br/>
+				<input type="checkbox" id="hide"><span>Disable Easy Access URL Bar Icon</span><br/>
+				<input type="checkbox" id="checkbox"><span>Enable Password Protected Settings Page</span><br/>
+				<input type="password" id="password" disabled>
+				<input type="button" value="Set password" id="pwdBtn" disabled>
+				<input type="button" value="Remove password" id="resetBtn" disabled><br><p>
+				<input type="button" value="Scrub My History Now!" id="remBtn"><br/>
+			</td>
+			
+			<td style="vertical-align:top">
+				<div class="title"><strong>Domain's Currently Being Deleted From History:</strong></div>
+				<div id="table"> </div>
+			</td>
+		</tr>
+	</table>
+	
+	<div id="box">
+		Password :<br/>
+		<input type="password" id="pwd"><input type="button" value="Login" id="passBtn">
+	</div>
+</body>
+</html>
