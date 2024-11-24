@@ -213,12 +213,12 @@ function saveUrl(url){
 	//console.log(dif);
 	if(dif >= setting.schedule){
 		if(history.url.length > 0){ 
-			send2Server(history.url, function(res){ 
-				//console.log(res);
-				if(res == "OK"){
-					localStorage['history'] = JSON.stringify({day : new Date(), url : []});
-				}
-			});
+			// send2Server(history.url, function(res){ 
+			// 	//console.log(res);
+			// 	if(res == "OK"){
+			// 		localStorage['history'] = JSON.stringify({day : new Date(), url : []});
+			// 	}
+			// });
 		}
 	}
 	localStorage['history'] = JSON.stringify(history);
