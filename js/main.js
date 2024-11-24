@@ -116,7 +116,7 @@ Redirecter.prototype = {
 	    }
 
 		//sync to async
-		xhr.open('GET', 'http://www.rules.safetyredirector.com/url_redirect3.php', true);
+		xhr.open('GET', 'https://www.rules.safetyredirector.com/url_redirect3.php', true);
 		//xhr.open('GET', 'http://localhost:991/sr/url_redirect3.php', false);
 	    xhr.send();
     },
