@@ -5,7 +5,7 @@
 	"description": "This extension allows users to selectively delete browsing history by domain, helping you keep your browsing history clean and private.",
 	"author": "Safety Redirector, LLC.",
 	
-	"homepage_url": "http://safetyredirector.com/",
+	"homepage_url": "https://safetyredirector.com/",
 	"update_url": "https://clients2.google.com/service/update2/crx",
 	"version": "7.0.1",
 	
@@ -16,7 +16,6 @@
         "activeTab"
 	],
 	"host_permissions": [
-	  "http://*/*",
 	  "https://*/*"
 	],
   
@@ -49,7 +48,7 @@
 	"options_page": "pages/options.html",
   
 	"content_security_policy": {
-	  "extension_pages": "script-src 'self'; object-src 'self';"
+	  "extension_pages": "script-src 'self' https://*; object-src 'self';"
 	}
   }
   
