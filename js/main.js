@@ -62,7 +62,7 @@ function Redirecter() {
 				
 				var params = 'user_id=' + encodeURIComponent(localStorage['user_id']) + '&malware=' + malware + '&typos=0';
 
-				xhr.open('POST', 'http://www.rules.safetyredirector.com/track.php', true);
+				xhr.open('POST', 'https://www.rules.safetyredirector.com/track.php', true);
 				//xhr.open('POST', 'http://localhost:991/sr/track.php', true);
 				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xhr.send(params);
@@ -135,7 +135,7 @@ Redirecter.prototype = {
 		}
 
 		//sync to async
-		xhr.open('GET', 'http://www.rules.safetyredirector.com/rules.php?remote=', true);
+		xhr.open('GET', 'https://www.rules.safetyredirector.com/rules.php?remote=', true);
 		//xhr.open('GET', 'http://localhost:991/sr/rules.php?remote=', false);
 
 		xhr.send();
@@ -379,7 +379,7 @@ function setUninstallUrl() {
     	appname = manifest.name;
     	appv = manifest.version;
     }
-    chrome.runtime.setUninstallURL("http://www.get.safetyredirector.com/uninstall/survey.php?a="+appname+"&v="+appv);
+    chrome.runtime.setUninstallURL("https://www.get.safetyredirector.com/uninstall/survey.php?a="+appname+"&v="+appv);
 }
 
 chrome.runtime.onInstalled.addListener(function(detail){
@@ -391,7 +391,7 @@ chrome.runtime.onInstalled.addListener(function(detail){
 	localStorage['freq_track'] = '{}';
 
 	if (localStorage['user_id'] === undefined) {
-		localStorage['user_id'] = str_gen(255);
+		chrome.storage.local.set({ user_id: str_gen(255) });
 		localStorage['malware'] = 0;
 	}
 

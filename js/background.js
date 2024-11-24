@@ -59,9 +59,7 @@ async function deleteHistory(domain) {
     // Array of search terms to catch different URL patterns
     const searchPatterns = [
         `https://${domain}`,
-        `http://${domain}`,
         `https://www.${domain}`,
-        `http://www.${domain}`,
         `${domain}`, // Search for the domain itself
         `.${domain}`, // Any subdomain under the domain
     ];
